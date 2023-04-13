@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-color: linear-gradient(to right, #cee7e1, #7ee1c4);
+  --text-color: #063426;
+  --border-boxes: 1px solid #0cdf9f;
+  --ff-input: 'Cedarville Cursive', cursive;
+  --ff-btn: 'Tilt Prism', cursive;
+  --ff-output: 'Dosis', sans-serif;
+}
+
+body {
+  background-image: var(--bg-color);
+  margin: 5rem 5rem 0;
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+}
+
+header h1 {
+  font-family: var(--ff-btn);
+  font-size: 3.2rem;
+  text-align: center;
+  color: var(--text-color);
+  margin: 0 5rem;
+}
+
+main {
+  color: var(--text-color);
+}
+
+
+.text-area-input {
+  margin-top: 5rem;
+  border: none;
+  width: 100%;
+  height: 30vh;
+  border-radius: 2rem;
+  padding: 2rem;
+  color: #8c9f99;
+  background: none;
+  border: var(--border-boxes);
+  font-size: 3.2rem;
+  font-family: var(--ff-input);
+  resize: none;
+}
+
+.text-area-input:focus {
+  outline: none !important;
+  border: 1px solid #063426;
+  box-shadow: 0 0 10px #59b290;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #c71d1d;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.alert img {
+  padding-right: 1rem;
+}
+
+.alert:hover {
+  background: #ebb0b0;
+  border-radius: 2.5rem;
+}
+
+.buttons {
+  margin-top: 8rem;
+  display: flex;
+  height: 7rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button {
+  width: 100%;
+  padding: 3rem 6rem;
+  border-radius: 2.5rem;
+  border: var(--border-boxes);
+  font-size: 1.6rem;
+  color: #095c45;
+  font-family: var(--ff-btn);
+  font-weight: bold;
+  letter-spacing: .5rem;
+  cursor: pointer;
+}
+
+.criptografar {
+  background: #9cc9c0;
+}
+
+.criptografar:hover,
+.descriptografar:hover {
+  background: #549b87;
+}
+
+.descriptografar {
+  margin-top: 2rem;
+  background: #6fdfbd;
+}
+
+.output {
+  text-align: center;
+  font-family: var(--ff-output);
+  color: var(--text-color);
+  border: var(--border-boxes);
+  border-radius: 2.5rem;
+  margin-top: 10rem;
+  height: 20vh;
+}
+
+.output h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+.output p {
+  font-size: 1.6rem;
+}
+
+footer {
+  margin: auto 0;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: var(--ff-output);
+  color: var(--text-color);
+}
+
+footer img {
+  width: 1.6rem;
+  margin: 0 .4rem;
+  animation: pulsarCoracao 1s infinite alternate;
+}
+
+.hide {
+  display: none;
+}
+
+
+@keyframes pulsarCoracao {
+  0% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 600px) {
+  .buttons {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .buttons button {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    display: grid;
+    grid-template-areas: "A B"
+      "C B";
+    grid-gap: 2rem;
+  }
+
+  main> :nth-child(1) {
+    grid-area: A;
+    width: 60vw;
+  }
+
+  main> :nth-child(2) {
+    grid-area: C;
+    width: 50vw;
+  }
+
+  main> :nth-child(3) {
+    grid-area: B;
+    width: 30vw;
+  }
+
+  .text-area-input {
+    height: 60vh;
+  }
+
+  .buttons {
+    margin-top: -15rem;
+  }
+
+  .buttons button {
+    width: 50%;
+  }
+
+  .output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -15rem;
+    height: 90vh;
+    padding: 5rem;
+  }
+
+  .output img {
+    border-radius: 22%;
+    margin: 0 auto;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  footer {
+    margin-top: -16rem;
+  }
+
+  .hide {
+    display: inline;
+  }
+}
+
+
+
+@media(min-width: 1600px) {
+  main> :nth-child(1) {
+    width: 60vw;
+  }
+
+  main> :nth-child(2) {
+    width: 30vw;
+    margin: -15rem auto;
+  }
+
+  main> :nth-child(3) {
+    width: 30vw;
+  }
+
+  .text-area-input {
+    height: 60vh;
+  }
+
+  .buttons button {
+    width: 50%;
+  }
+
+  .output img {
+    width: 40rem;
+    height: 30rem;
+  }
+}
