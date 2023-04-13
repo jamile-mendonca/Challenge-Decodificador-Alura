@@ -7,8 +7,8 @@
 :root {
   font-size: 62.5%;
   --bg-color: linear-gradient(to right, #cee7e1, #7ee1c4);
-  --text-color: #063426;
-  --border-boxes: 1px solid #0cdf9f;
+  --text-color: #687616;
+  --border-boxes: 2px solid #d9d172;
   --ff-input: 'Cedarville Cursive', cursive;
   --ff-btn: 'Tilt Prism', cursive;
   --ff-output: 'Dosis', sans-serif;
@@ -46,7 +46,6 @@ main {
   padding: 2rem;
   color: #8c9f99;
   background: none;
-  border: var(--border-boxes);
   font-size: 3.2rem;
   font-family: var(--ff-input);
   resize: none;
@@ -54,15 +53,15 @@ main {
 
 .text-area-input:focus {
   outline: none !important;
-  border: 1px solid #063426;
-  box-shadow: 0 0 10px #59b290;
+  border: 1px solid #d9d172;
+  box-shadow: 0 0 10px #788237;
 }
 
 .alert {
   display: flex;
   align-items: center;
   font-size: 1.6rem;
-  color: #c71d1d;
+  color: var(--text-color);
   margin: 2rem 0;
   text-align: center;
 }
@@ -91,7 +90,7 @@ main {
   border-radius: 2.5rem;
   border: var(--border-boxes);
   font-size: 1.6rem;
-  color: #095c45;
+  color: var(--text-color);
   font-family: var(--ff-btn);
   font-weight: bold;
   letter-spacing: .5rem;
@@ -99,27 +98,28 @@ main {
 }
 
 .criptografar {
-  background: #9cc9c0;
+  background: #d5d9b3;
 }
 
 .criptografar:hover,
 .descriptografar:hover {
-  background: #549b87;
+  background: #cbc995;
 }
 
 .descriptografar {
   margin-top: 2rem;
-  background: #6fdfbd;
+  background: #ccd395;
 }
 
 .output {
   text-align: center;
   font-family: var(--ff-output);
   color: var(--text-color);
-  border: var(--border-boxes);
   border-radius: 2.5rem;
   margin-top: 10rem;
   height: 20vh;
+  background: #a4e1cf;
+  ;
 }
 
 .output h2 {
@@ -257,6 +257,10 @@ footer img {
 
   .text-area-input {
     height: 60vh;
+  }
+
+  .alert {
+    padding-left: 29%;
   }
 
   .buttons button {
