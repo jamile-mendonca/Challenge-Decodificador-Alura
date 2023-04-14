@@ -31,9 +31,16 @@
       <button class="descriptografar">Descriptografar</button>
     </section>
     <section class="output">
-      <img class="hide" src="./assets/cadeado.jpg" alt="imagem de um cadeado">
-      <h2>Nenhuma mensagem encontrada</h2>
-      <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+      <div class="change">
+        <img src="./assets/cadeado.jpg" alt="imagem de um cadeado">
+        <h2>Nenhuma mensagem encontrada</h2>
+        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+      </div>
+
+      <div class="output-answer hide">
+        <textarea class='text-area-output'></textarea>
+        <button class="copy" onclick="copiarTexto()">Copiar</button>
+      </div>
     </section>
 
   </main>
