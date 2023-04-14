@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dosis&family=Tilt+Prism&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +21,8 @@
   </header>
   <main>
     <section class="input">
-      <textarea class="text-area-input" placeholder="Digite seu texto"></textarea>
+      <textarea class="text-area-input" placeholder="Digite seu texto"
+        oninput="this.value = this.value.replace(/[^a-z]/g, '').toLowerCase()"></textarea>
       <p class="alert"> <img src="./assets/exclamacao.png" alt="Símbolo de um ponto de exclamação dentro de um círculo">
         Apenas letras minúsculas e sem acento</p>
     </section>
